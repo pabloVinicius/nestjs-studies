@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Pen {
+  size: Int!
+  id: String!
+  color: String!
+}
+
+type Query {
+  getPens: [Pen]!
+  getPenDetails(id: String!): Pen!
+}
+
+type Mutation {
+  createPen(pen: PenInput!): Pen!
+  updatePen(pen: PenInput!, id: String!): Pen!
+  deletePen(id: String!): Pen!
+}
+
+"""Input type of a pen"""
+input PenInput {
+  size: Int
+  color: String!
+}
